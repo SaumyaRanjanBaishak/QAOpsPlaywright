@@ -18,7 +18,7 @@ test("Calendar Validations",async ({page})=>{
     const inputs=page.locator(".react-date-picker__inputGroup input");
     for(let i=0;i<expectedList.length;i++){
         const value=await inputs.nth(i).inputValue();
-        //console.log(`Expected: ${expectedList[i]} | Actual: ${value}`);
+        
         expect(value).toEqual(expectedList[i]);
     }
 
